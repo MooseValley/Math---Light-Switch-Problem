@@ -24,9 +24,9 @@ public class LightSwitchProblem
       }
 
       // Toggle every 2nd switch, and then every 3rd switch, etc ...
-      for (int everyNSwitch = 2; everyNSwitch <= MAX; everyNSwitch++)
+      for (int everyNSwitch = 2; everyNSwitch < lightSwitchStatus.length; everyNSwitch++)
       {
-         for (int switchNum = everyNSwitch; switchNum <= MAX; switchNum = switchNum + everyNSwitch)
+         for (int switchNum = everyNSwitch; switchNum < lightSwitchStatus.length; switchNum = switchNum + everyNSwitch)
          {
             lightSwitchStatus [switchNum] = !(lightSwitchStatus [switchNum]);
             //System.out.prinltn (
@@ -34,7 +34,7 @@ public class LightSwitchProblem
       }
 
       // Display final status of the switches, 10 per line
-      for (int switchNum = 1; switchNum <= MAX; switchNum++)
+      for (int switchNum = 1; switchNum < lightSwitchStatus.length; switchNum++)
       {
          //System.out.print (String.format("%3d", switchNum) + ".  ");
 
